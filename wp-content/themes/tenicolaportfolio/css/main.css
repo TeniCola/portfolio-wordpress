@@ -1,0 +1,304 @@
+/***** BASE STYLES *****/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(#d6d5fe, #d6d5fe, #aaaafd) fixed;
+}
+
+#current-page {
+    background: #26202a;
+}
+
+.hidden {
+    display: none;
+}
+
+h3 {
+    color: #64688c;
+    font-family: 'Nova Slim', cursive;
+    font-size: 40px;
+    font-weight: normal;
+    letter-spacing: 5px;
+    line-height: 0px;
+    padding: auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h4 {
+    color: #0f0f0f;
+    font-family: 'Nova Slim', cursive;
+    font-size: 30px;
+    font-variant: small-caps;
+    font-weight: normal;
+    letter-spacing: 3px;
+    line-height: 0px;
+    padding: auto;
+    margin-left: 5px;
+}
+
+.frame-width .center {
+    text-align: center;
+}
+
+.frame-width p {
+    color: #0f0f0f;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+hr {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 50%;
+    border: #aaaafd solid 0.5px;
+}
+
+
+/***** GRID *****/
+
+.full-width {
+    width: 1200px;
+    margin: 0px auto;
+}
+
+.half-width {
+    width: 600px;
+    float: left;
+}
+
+.third-width, {
+    width: 400px;
+    float: left;
+}
+
+.two-third-width {
+    width: 800px;
+    float: left;
+}
+
+.frame {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 0px 5px #8789c5;
+    margin: 20px auto 20px auto;
+    width: 1200px;
+    height: auto;
+    overflow: auto;
+    clear: both;
+}
+
+.frame-width {
+    margin: 15px 94px 25px 94px;
+    clear: both;
+}
+
+.frame-width a {
+    color: #8789c5;
+}
+
+.frame-width a:hover {
+    color: #aaaafd;
+}
+
+
+/***** HEADER + NAV *****/
+
+header {
+    width: 1200px;
+    margin: 0px auto;
+}
+
+header h1 {
+    color: #26202a;
+    font-family: 'Nova Slim', cursive;
+    font-size: 72px;
+    font-weight: normal;
+    line-height: 30px;
+    margin-left: 0px;
+    padding-top: 0px;
+}
+
+header h1:hover {
+    color: #64688c;
+}
+
+header a {
+    color: #26202a;
+    text-decoration: none;
+}
+
+header h2 {
+    color: #64688c;
+    font-family: 'Nova Slim', cursive;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: italic;
+    font-variant: small-caps;
+    line-height: 0px;
+    letter-spacing: 1px;
+    text-align: right;
+    padding-top: 65px;
+}
+
+nav {
+    width: 1010px;
+    letter-spacing: 1px;
+    margin-left: 100px;
+    overflow: auto;
+    font-weight: normal;
+}
+
+nav p {
+    background: #64688c;
+    width: 190px;
+    float: left;
+    text-align: center;
+    margin-top: 35px;
+    margin-right: 12px;
+    padding: 10px 0px;
+}
+
+nav a {
+    color: #d7d6fe;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 0px;
+}
+
+nav p:hover {
+    background: #aaaafd;
+    box-shadow: 0px 0px 5px #64688c;
+}
+
+
+/***** HOME  *****/
+
+#home img {
+    margin-left: 5px;
+    max-width: 100%;
+}
+
+
+/***** ABOUT *****/
+
+#about img {
+    max-width: 300px;
+    margin-right: 30px;
+    float: left;
+}
+
+
+/***** GALLERIES (Illustrations, Sequentials, Projects)  *****/
+
+.gallery {
+    overflow: auto;
+}
+
+.thumbnail:hover {
+    opacity: 0.65;
+    box-shadow: 0px 0px 5px #64688c;
+}
+
+a .thumbnail {
+    width: 190px;
+    height: 140px;
+    margin: 6px;
+    object-fit: cover;
+    object-position: center;
+    float: left;
+}
+
+
+/***** LIGHTBOX *****/
+
+.lightbox {
+	display: none;
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.75);
+}
+
+.lightbox img {
+	max-width: 85%;
+	max-height: 85%;
+	margin-top: 40px;
+}
+
+.lightbox h6 {
+    background: black;
+    font-weight: normal;
+    color: #d7d6fe;
+    font-size: 14px;
+    margin: 5px auto auto auto;
+    padding: 5px 10px;
+}
+
+.gallery a {
+    text-decoration: none;
+}
+
+.lightbox:target {
+	outline: none;
+	display: block;
+}
+
+
+/***** FOOTER *****/
+
+footer {
+    width: 1200px;
+    margin: 0px auto 20px auto;
+    overflow: auto;
+}
+
+footer div div {
+    color: #64688c;
+    font-size: 12.5px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    line-height: 18px;
+    float: left;
+    width: 594px;
+}
+
+footer section p {
+    color: #d7d6fe;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    line-height: 12px;
+    background: #64688c;
+    width: 89px;
+    float: left;
+    margin-left: 12px;
+    padding: 10px 0px;
+}
+
+footer section p:hover {
+    background: #26202a;
+    box-shadow: 0px 0px 5px #64688c;
+}
+
+footer span {
+    text-transform: uppercase;
+}
+
+footer a {
+    color: #d7d6fe;
+    text-decoration: none;
+}
+
+/***** END *****/
