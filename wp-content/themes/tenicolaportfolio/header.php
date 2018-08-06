@@ -27,7 +27,7 @@
         <header>
             <div class="full-width">
                 <div class="half-width">
-                    <a href="index.html"><h1>Teniola Coker</h1></a>
+                    <a href="<?php echo site_url(); ?>"><h1>Teniola Coker</h1></a>
                 </div>
                 <div class="half-width">
                     <h2>Illustrator, Designer, &amp; Visual Storytelller</h2>
@@ -38,9 +38,5 @@
         <main>
             <div class="frame">
                 <nav>
-                    <p><a href="illustrations/index.html">Illustrations</a></p>
-                    <p><a href="comics/index.html">Comics</a></p>
-                    <p><a href="designs/index.html">Designs</a></p>
-                    <p><a href="projects/index.html">Projects</a></p>
-                    <p><a href="about/index.html">About</a></p>
+                    <?php wp_nav_menu( array( 'theme_location' => 'top-nav', 'menu_class' => 'nav-menu' ) ); ?>
                 </nav>

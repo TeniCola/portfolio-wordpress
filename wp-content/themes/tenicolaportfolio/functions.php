@@ -33,8 +33,8 @@ function portfolio_setup() {
 
     // Register Menus
     register_nav_menus( array (
-        'top-nav' => __( 'Top Nav', 'accelerate' ),
-        'social-media'  => __( 'Social Media Nav', 'accelerate' ),
+        'top-nav' => __( 'Top Nav' ),
+        'social-media'  => __( 'Social Media Nav' ),
     ) );
 }
 add_action( 'after_setup_theme', 'portfolio_setup' );

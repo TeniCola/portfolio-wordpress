@@ -19,12 +19,7 @@
                         Portfolio Handmade by Teniola Coker || Last Updated -- July 2018</p>
                     </div>
                     <section>
-                        <p><a href="https://twitter.com/ColaCanvas" target="_blank">Twitter</a></p>
-                        <p><a href="https://tenicola.tumblr.com/" target="_blank">Tumblr</a></p>
-                        <p><a href="https://www.instagram.com/colacanvas/" target="_blank">Instagram</a></p>
-                        <p><a href="https://github.com/TeniCola" target="_blank">Github</a></p>
-                        <p><a href="https://linkedin.com/in/tenicoker" target="_blank">Linkedin</a></p>
-                        <p><a href="https://ko-fi.com/tenicola" target="_blank">Ko-fi</a></p>
+                        <?php wp_nav_menu( array( 'theme_location' => 'social-media', 'menu_class' => 'social-media-menu' ) ); ?>
                     </section>
                 </div>
             </footer>
