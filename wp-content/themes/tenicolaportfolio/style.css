@@ -240,15 +240,20 @@ ul.nav-menu/*, ul.social-media-menu*/ {
     box-shadow: 0px 0px 5px #64688c;
 }
 
-a .thumbnail {
+a.thumbnail { /*orig - a .thumbnail*/
     width: 190px;
     height: 140px;
     margin: 6px;
-    object-fit: cover;
-    object-position: center;
     float: left;
+    /*overflow: hidden; */
 }
 
+a.thumbnail img { 
+    width: 190px;
+    height: 140px;
+    object-fit: cover;
+    object-position: center;
+}
 
 /***** LIGHTBOX *****/
 
@@ -265,6 +270,8 @@ a .thumbnail {
 }
 
 .lightbox img {
+    width: unset;
+    height: unset;
 	max-width: 85%;
 	max-height: 85%;
 	margin-top: 40px;

@@ -8,8 +8,8 @@
  * different template.
  *
  * @package WordPress
- * @subpackage Accelerate Marketing
- * @since Accelerate Marketing 2.0
+ * @subpackage TeniCola Portfolio
+ * @since TeniCola Portfolio 1.0
  */
 
 get_header(); ?>
