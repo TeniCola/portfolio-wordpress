@@ -51,8 +51,6 @@ function portfolio_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'portfolio_styles' );
 
-
-
 // Register widget area
 function portfolio_widgets_init() {
 	register_sidebar( array(
@@ -87,3 +85,32 @@ function custom_excerpt_more($more) {
 	return '...<div class="read-more-link"><a  href="'. get_permalink() . '"><span>Read more</span> &rsaquo;</a></div>';
 }
 add_filter('excerpt_more', 'custom_excerpt_more');
+
+
+// Register custom post types for page banners and custom galleries
+function create_custom_post_types() {
+    register_post_type( 'page_banners',
+        array(
+            'labels' => array(
+                'name' => __( 'Page Banners' ),
+                'singular_name' => __( 'Page Banner' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array( 'slug' => 'page-banners' ),
+        )
+	);
+	
+	register_post_type( 'custom_galleries',
+        array(
+            'labels' => array(
+                'name' => __( 'Custom Galleries' ),
+                'singular_name' => __( 'Custom Gallery' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array( 'slug' => 'custom-gallery' ),
+        )
+    );
+}
+add_action( 'init', 'create_custom_post_types' );

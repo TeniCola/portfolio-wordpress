@@ -163,6 +163,7 @@ nav {
     margin-left: 60px;
     overflow: auto;
     font-weight: normal;
+    padding-bottom: 16px;
 }
 
 nav li {
@@ -203,12 +204,20 @@ ul.nav-menu/*, ul.social-media-menu*/ {
 }
 
 
-/***** HOME  *****/
+/***** PAGE BANNERS *****/
 
-#home img {
+.banner img {
     margin-left: 5px;
     max-width: 100%;
 }
+
+/* #home img {
+    margin-left: 5px;
+    max-width: 100%;
+} */
+
+/***** CUSTOM GALLERIES *****/
+
 
 
 /***** ABOUT *****/
