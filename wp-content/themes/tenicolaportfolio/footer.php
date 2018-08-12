@@ -23,6 +23,7 @@
                     </section>
                 </div>
             </footer>
+            <div class="footer-padding"><!--additional padding for certain pages--></div>
         </main>
         <?php wp_footer(); ?>
     </body>

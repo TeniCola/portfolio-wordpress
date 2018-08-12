@@ -1,6 +1,8 @@
 <?php
 /**
- * The template for displaying a single custom gallery
+ * The template for displaying a single custom gallery for the "Illustrations" page
+ * // SHOULD ALWAYS BE IDENTICAL CODE with other gallery post types pages //
+ * // TEMPORARY SOLUTION CODE while the code for the custom galleries is troubleshooted //
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -14,11 +16,11 @@
 
 get_header(); ?>
 
-<div class="frame-width gallery" role="main">
-    <h4>Placeholder</h4> 
+<div class="frame-width" role="main">
+    <h4><?php the_title(); ?></h4> 
 	<?php while ( have_posts() ) : the_post();
         $size = 'medium';
-        $full = 'full';
+        $full = 'full';       
         // IMAGES
         $image_01 = get_field('image_01');
         $image_02 = get_field('image_02');
@@ -42,7 +44,7 @@ get_header(); ?>
         $meta_09 = wp_get_attachment( $image_09 );
         $meta_10 = wp_get_attachment( $image_10 ); ?>
 
-        <div>
+        <div class="gallery">
             <!-- IMAGE 01 -->
             <a href="#<?php echo $image_01 ?>" class="thumbnail">
                 <?php if($image_01) { 
@@ -134,7 +136,8 @@ get_header(); ?>
                     echo wp_get_attachment_image( $image_10, $full);  
                 } ?><h6><?php echo $meta_10['caption']?></h6></a>
         </div>			
-	<?php endwhile; // end of the loop. ?>
+    <?php endwhile; // end of the loop. ?>
+    <div class="footer-padding"><!--additional padding for certain pages--></div>
 </div><!-- .main-content -->
 
 <?php get_footer(); ?>

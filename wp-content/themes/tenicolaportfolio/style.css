@@ -54,6 +54,12 @@ h4 {
     text-align: center;
 }
 
+div.frame-width.main-content p {
+    text-align: center;
+    margin-bottom: 0px;
+}
+/*find way to unset these options for project and About page content*/
+
 .frame-width p {
     color: #0f0f0f;
     font-size: 16px;
@@ -361,11 +367,14 @@ ul#menu-social-media-menu li {
     padding: 10px 0px;
 }
 
-
-
 ul#menu-social-media-menu li:hover {
     background: #26202a;
     box-shadow: 0px 0px 5px #64688c;
+}
+
+div.footer-padding {
+    height: 20px;
+    clear: both;
 }
 
 footer span {

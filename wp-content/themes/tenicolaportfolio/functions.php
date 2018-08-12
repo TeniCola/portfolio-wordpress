@@ -101,17 +101,70 @@ function create_custom_post_types() {
         )
 	);
 	
-	register_post_type( 'custom_galleries',
-        array(
-            'labels' => array(
-                'name' => __( 'Custom Galleries' ),
-                'singular_name' => __( 'Custom Gallery' )
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array( 'slug' => 'custom-galleries' ),
-        )
-    );
+	// TEMPORARY SOLUTIONS //
+	register_post_type( 'illustrations',
+		array(
+			'labels' => array(
+				'name' => __( 'Illustrations Galleries' ),
+				'singular_name' => __( 'Illustrations Gallery' )
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array( 'slug' => 'illustrations-galleries' ),
+		)
+	);
+
+	register_post_type( 'comics',
+		array(
+			'labels' => array(
+				'name' => __( 'Comics Galleries' ),
+				'singular_name' => __( 'Comics Gallery' )
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array( 'slug' => 'comics-galleries' ),
+		)
+	);
+
+	register_post_type( 'designs',
+		array(
+			'labels' => array(
+				'name' => __( 'Designs Galleries' ),
+				'singular_name' => __( 'Designs Gallery' )
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array( 'slug' => 'designs-galleries' ),
+		)
+	);
+
+	register_post_type( 'projects',
+		array(
+			'labels' => array(
+				'name' => __( 'Projects Galleries' ),
+				'singular_name' => __( 'Projects Gallery' )
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array( 'slug' => 'projects-galleries' ),
+		)
+	);
+	// TEMPORARY SOLUTIONS; Comments out the code for eventual custom post type solution //
+
+	/**
+	 * register_post_type( 'custom_galleries',
+     *     array(
+     *         'labels' => array(
+     *             'name' => __( 'Custom Galleries' ),
+     *             'singular_name' => __( 'Custom Gallery' )
+     *         ),
+     *        'public' => true,
+     *        'has_archive' => true,
+     *        'rewrite' => array( 'slug' => 'custom-galleries' ),
+     *    )
+	 * );
+	 */
+
 }
 add_action( 'init', 'create_custom_post_types' );
 

@@ -1,0 +1,180 @@
+<?php
+/**
+ * The template for displaying a single custom gallery
+ * // TO BE REVISITED for adjusting queries and meta for retriving catagories, etc. //
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site will use a
+ * different template.
+ *
+ * @package WordPress
+ * @subpackage TeniCola Portfolio
+ * @since TeniCola Portfolio 1.0
+ */
+
+get_header(); ?>
+
+<div class="frame-width gallery" role="main">
+    <h4><?php the_title(); ?></h4> 
+	<?php while ( have_posts() ) : the_post();
+        $size = 'medium';
+        $full = 'full';
+        // $gallery_category = get_post('gallery_category');
+
+        // TESTING CATAGORY FIELD //
+        $gallery_category = get_field('gallery_category');
+        if ($gallery_category) {
+          if (!is_array($gallery_category)) {
+            $gallery_category = array($gallery_category);
+          }
+          $args = array(
+            'post_type' => 'custom_galleries',
+            'post_date' => 'ASC',
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'gallery_category',
+                'terms' => $gallery_category,
+              ),
+            ),
+          );
+        }
+        // END TESTING CATAGORY FIELD //
+        
+        // IMAGES
+        $image_01 = get_field('image_01');
+        $image_02 = get_field('image_02');
+        $image_03 = get_field('image_03');
+        $image_04 = get_field('image_04');
+        $image_05 = get_field('image_05');
+        $image_06 = get_field('image_06');
+        $image_07 = get_field('image_07');
+        $image_08 = get_field('image_08');
+        $image_09 = get_field('image_09');
+        $image_10 = get_field('image_10'); 
+        // META DATA (CAPTIONS, ETC)
+        $meta_01 = wp_get_attachment( $image_01 );
+        $meta_02 = wp_get_attachment( $image_02 );
+        $meta_03 = wp_get_attachment( $image_03 );
+        $meta_04 = wp_get_attachment( $image_04 );
+        $meta_05 = wp_get_attachment( $image_05 );
+        $meta_06 = wp_get_attachment( $image_06 );
+        $meta_07 = wp_get_attachment( $image_07 );
+        $meta_08 = wp_get_attachment( $image_08 );
+        $meta_09 = wp_get_attachment( $image_09 );
+        $meta_10 = wp_get_attachment( $image_10 ); ?>
+
+        <!-- /// TESTING CATEGORIES FIELD/// -->
+        <div>
+            
+        <?php $quote_query = new WP_Query($args);
+            if ($quote_query->have_posts()) {
+                while($quote_query->have_posts()) {
+                $quote_query->the_post();
+                echo '<p>',the_title(),'</p>';
+                }
+            }
+            wp_reset_postdata();?>
+
+        <p><?php echo $gallery_category['gallery_category']?></p>
+        
+        </div>
+        <!-- /// END TESTING CATEGORIES FIELD/// -->
+
+        <div>
+            <!-- IMAGE 01 -->
+            <a href="#<?php echo $image_01 ?>" class="thumbnail">
+                <?php if($image_01) { 
+                    echo wp_get_attachment_image( $image_01, $size );
+                } ?></a>
+            <a href="#_" class="lightbox" id="<?php echo $image_01 ?>">
+                <?php if($image_01) { 
+                    echo wp_get_attachment_image( $image_01, $full);  
+                } ?><h6><?php echo $meta_01['caption']?></h6></a>
+            <!-- IMAGE 02 -->
+            <a href="#<?php echo $image_02 ?>" class="thumbnail">
+                <?php if($image_02) { 
+                    echo wp_get_attachment_image( $image_02, $size );
+                } ?></a>
+            <a href="#_" class="lightbox" id="<?php echo $image_02 ?>">
+                <?php if($image_02) { 
+                    echo wp_get_attachment_image( $image_02, $full);
+                } ?><h6><?php echo $meta_02['caption']?></h6></a>
+            <!-- IMAGE 03 -->
+            <a href="#<?php echo $image_03 ?>" class="thumbnail">
+                <?php if($image_03) { 
+                    echo wp_get_attachment_image( $image_03, $size );
+                } ?></a>
+            <a href="#_" class="lightbox" id="<?php echo $image_03 ?>">
+                <?php if($image_03) { 
+                    echo wp_get_attachment_image( $image_03, $full);  
+                } ?><h6><?php echo $meta_03['caption']?></h6></a>
+            <!-- IMAGE 04 -->
+            <a href="#<?php echo $image_04 ?>" class="thumbnail">
+                <?php if($image_04) { 
+                    echo wp_get_attachment_image( $image_04, $size );
+                } ?></a>
+            <a href="#_" class="lightbox" id="<?php echo $image_04 ?>">
+                <?php if($image_04) { 
+                    echo wp_get_attachment_image( $image_04, $full);  
+                } ?><h6><?php echo $meta_04['caption']?></h6></a>
+            <!-- IMAGE 05 -->
+            <a href="#<?php echo $image_05 ?>" class="thumbnail">
+                <?php if($image_05) { 
+                    echo wp_get_attachment_image( $image_05, $size );
+                } ?></a>
+            <a href="#_" class="lightbox" id="<?php echo $image_05 ?>">
+                <?php if($image_05) { 
+                    echo wp_get_attachment_image( $image_05, $full);  
+                } ?><h6><?php echo $meta_05['caption']?></h6></a>
+            <!-- IMAGE 06 -->
+            <a href="#<?php echo $image_06 ?>" class="thumbnail">
+                <?php if($image_06) { 
+                    echo wp_get_attachment_image( $image_06, $size );
+                } ?></a>
+            <a href="#_" class="lightbox" id="<?php echo $image_06 ?>">
+                <?php if($image_06) { 
+                    echo wp_get_attachment_image( $image_06, $full);  
+                } ?><h6><?php echo $meta_06['caption']?></h6></a>
+            <!-- IMAGE 07 -->
+            <a href="#<?php echo $image_07 ?>" class="thumbnail">
+                <?php if($image_07) { 
+                    echo wp_get_attachment_image( $image_07, $size );
+                } ?></a>
+            <a href="#_" class="lightbox" id="<?php echo $image_07 ?>">
+                <?php if($image_07) { 
+                    echo wp_get_attachment_image( $image_07, $full);  
+                } ?><h6><?php echo $meta_07['caption']?></h6></a>
+            <!-- IMAGE 08 -->
+            <a href="#<?php echo $image_08 ?>" class="thumbnail">
+                <?php if($image_08) { 
+                    echo wp_get_attachment_image( $image_08, $size );
+                } ?></a>
+            <a href="#_" class="lightbox" id="<?php echo $image_08 ?>">
+                <?php if($image_08) { 
+                    echo wp_get_attachment_image( $image_08, $full);  
+                } ?><h6><?php echo $meta_08['caption']?></h6></a>
+            <!-- IMAGE 09 -->
+            <a href="#<?php echo $image_09 ?>" class="thumbnail">
+                <?php if($image_09) { 
+                    echo wp_get_attachment_image( $image_09, $size );
+                } ?></a>
+            <a href="#_" class="lightbox" id="<?php echo $image_09 ?>">
+                <?php if($image_09) { 
+                    echo wp_get_attachment_image( $image_09, $full);  
+                } ?><h6><?php echo $meta_09['caption']?></h6></a>
+            <!-- IMAGE 10 -->
+            <a href="#<?php echo $image_10 ?>" class="thumbnail">
+                <?php if($image_10) { 
+                    echo wp_get_attachment_image( $image_10, $size );
+                } ?></a>
+            <a href="#_" class="lightbox" id="<?php echo $image_10 ?>">
+                <?php if($image_10) { 
+                    echo wp_get_attachment_image( $image_10, $full);  
+                } ?><h6><?php echo $meta_10['caption']?></h6></a>
+        </div>			
+    <?php endwhile; // end of the loop. ?>
+    <div class="footer-padding"><!--additional padding for certain pages--></div>
+</div><!-- .main-content -->
+
+<?php get_footer(); ?>
