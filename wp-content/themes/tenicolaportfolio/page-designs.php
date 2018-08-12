@@ -2,7 +2,7 @@
 /**
  * The template for displaying the "Designs" page
  * // NEAR IDENTICAL TO OTHER PAGES save for Designs post type, and aside from "About" page //
- * // TEMPORARY SOLUTION //
+ * 
  *
  * @package WordPress
  * @subpackage TeniCola Portfolio

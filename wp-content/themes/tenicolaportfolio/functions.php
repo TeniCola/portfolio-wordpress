@@ -89,19 +89,8 @@ add_filter('excerpt_more', 'custom_excerpt_more');
 
 // Register custom post types for page banners and custom galleries
 function create_custom_post_types() {
-    register_post_type( 'page_banners',
-        array(
-            'labels' => array(
-                'name' => __( 'Page Banners' ),
-                'singular_name' => __( 'Page Banner' )
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array( 'slug' => 'page-banners' ),
-        )
-	);
-	
-	// TEMPORARY SOLUTIONS //
+
+	// ILLUSTRATIONS //
 	register_post_type( 'illustrations',
 		array(
 			'labels' => array(
@@ -114,6 +103,7 @@ function create_custom_post_types() {
 		)
 	);
 
+	// COMICS //
 	register_post_type( 'comics',
 		array(
 			'labels' => array(
@@ -126,6 +116,7 @@ function create_custom_post_types() {
 		)
 	);
 
+	// DESIGNS //
 	register_post_type( 'designs',
 		array(
 			'labels' => array(
@@ -138,6 +129,7 @@ function create_custom_post_types() {
 		)
 	);
 
+	// PROJECTS //
 	register_post_type( 'projects',
 		array(
 			'labels' => array(
@@ -149,8 +141,21 @@ function create_custom_post_types() {
 			'rewrite' => array( 'slug' => 'projects-galleries' ),
 		)
 	);
-	// TEMPORARY SOLUTIONS; Comments out the code for eventual custom post type solution //
 
+	// PAGE BANNERS //
+	register_post_type( 'page_banners',
+        array(
+            'labels' => array(
+                'name' => __( 'Page Banners' ),
+                'singular_name' => __( 'Page Banner' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array( 'slug' => 'page-banners' ),
+        )
+	);
+	
+	// Comments out the code for posisble custom post type solution, otherwise no longer necessary //
 	/**
 	 * register_post_type( 'custom_galleries',
      *     array(

@@ -2,7 +2,7 @@
 /**
  * The template for displaying the "Illustrations" page
  * // NEAR IDENTICAL TO OTHER PAGES save for illustrations post type, and aside from "About" page //
- * // TEMPORARY SOLUTION //
+ * 
  *
  * @package WordPress
  * @subpackage TeniCola Portfolio

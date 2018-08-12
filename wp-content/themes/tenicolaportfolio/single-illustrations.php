@@ -2,12 +2,7 @@
 /**
  * The template for displaying a single custom gallery for the "Illustrations" page
  * // SHOULD ALWAYS BE IDENTICAL CODE with other gallery post types pages //
- * // TEMPORARY SOLUTION CODE while the code for the custom galleries is troubleshooted //
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
  *
  * @package WordPress
  * @subpackage TeniCola Portfolio
