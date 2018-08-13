@@ -14,13 +14,13 @@ get_header(); ?>
 	<div id="primary">
 		<div class="frame-width main-content" role="main">
 			<h3><?php the_title(); ?></h3>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<p><?php while ( have_posts() ) : the_post(); ?></p>
 				<?php the_content(); ?>
 
 			<div>
 				<?php query_posts('post_type=projects&order=ASC'); ?>
 				<?php while ( have_posts() ) : the_post();
-				$size = 'medium';
+				$size = 'full';
 				$full = 'full';
 				// IMAGES
 				$image_01 = get_field('image_01');
@@ -44,10 +44,11 @@ get_header(); ?>
 				$meta_08 = wp_get_attachment( $image_08 );
 				$meta_09 = wp_get_attachment( $image_09 );
 				$meta_10 = wp_get_attachment( $image_10 ); ?>
-						
+                                        
 					<div class="gallery">
                     <hr/>
                     <h4><?php the_title(); ?></h4>
+                    <p><?php the_content(); ?></p>
                         <!-- IMAGE 01 -->
                         <a href="#<?php echo $image_01 ?>" class="thumbnail">
                             <?php if($image_01) { 

@@ -59,7 +59,10 @@ div.frame-width.main-content p {
     text-align: center;
     margin-bottom: 0px;
 }
-/*find way to unset these options for project and About page content*/
+
+div.frame-width.main-content div.gallery p, div.frame-width.main-content.about-page p {
+    text-align: left;
+}
 
 .frame-width p {
     color: #0f0f0f;
@@ -219,7 +222,7 @@ ul.nav-menu {
 
 /***** ABOUT *****/
 
-#about img {
+img#about {
     max-width: 300px;
     margin-right: 30px;
     float: left;

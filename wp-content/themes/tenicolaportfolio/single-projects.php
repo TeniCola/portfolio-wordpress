@@ -12,8 +12,8 @@
 get_header(); ?>
 
 <div class="frame-width" role="main">
-    <h4><?php the_title(); ?></h4> 
-	<?php while ( have_posts() ) : the_post();
+    <h4><?php the_title(); ?></h4>
+    <?php while ( have_posts() ) : the_post();
         $size = 'medium';
         $full = 'full';       
         // IMAGES
@@ -39,6 +39,7 @@ get_header(); ?>
         $meta_09 = wp_get_attachment( $image_09 );
         $meta_10 = wp_get_attachment( $image_10 ); ?>
 
+        <p><?php the_content(); ?></p> 
         <div class="gallery">
             <!-- IMAGE 01 -->
             <a href="#<?php echo $image_01 ?>" class="thumbnail">

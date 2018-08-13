@@ -48,6 +48,7 @@ get_header(); ?>
 					<div class="gallery">
                     <hr/>
                     <h4><?php the_title(); ?></h4>
+                    <p><?php the_content(); ?></p>
                         <!-- IMAGE 01 -->
                         <a href="#<?php echo $image_01 ?>" class="thumbnail">
                             <?php if($image_01) { 

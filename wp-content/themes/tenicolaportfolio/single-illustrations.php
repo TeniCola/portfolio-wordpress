@@ -39,6 +39,7 @@ get_header(); ?>
         $meta_09 = wp_get_attachment( $image_09 );
         $meta_10 = wp_get_attachment( $image_10 ); ?>
 
+        <p><?php the_content(); ?></p>
         <div class="gallery">
             <!-- IMAGE 01 -->
             <a href="#<?php echo $image_01 ?>" class="thumbnail">
