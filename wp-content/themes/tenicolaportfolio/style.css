@@ -209,6 +209,29 @@ ul.nav-menu {
     margin: 0px;
 }
 
+/***** ***** ***** ***** *****/
+
+
+/***** ATTACHMENT PAGE  *****/
+
+div.frame-width.attachment-page {
+    text-align: center;
+}
+
+div.frame-width.attachment-page img.attachment-full.size-full {
+    /* margin: 0 5px; */
+    width: auto;
+    height: auto;
+    max-width: 999px;
+}
+
+div.frame-width p.attachment-caption {
+    text-align: center;
+    font-weight: bold;
+}
+
+/***** ***** ***** ***** *****/
+
 
 /***** PAGE BANNERS *****/
 
