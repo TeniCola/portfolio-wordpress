@@ -154,6 +154,19 @@ function create_custom_post_types() {
             'rewrite' => array( 'slug' => 'page-banners' ),
         )
 	);
+
+	// ADDITIONAL TEXT FOR OTHER PAGE TEMPLATES //
+	register_post_type( 'added_text',
+        array(
+            'labels' => array(
+                'name' => __( 'Additional Text' ),
+                'singular_name' => __( 'Additional Text' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array( 'slug' => 'added-text' ),
+        )
+	);
 	
 	// Comments out the code for posisble custom post type solution, otherwise no longer necessary //
 	/**

@@ -19,11 +19,15 @@ get_header(); ?>
 	<section class="index-page">
 		<div class="site-content">
 			<div class="main-content">
-				<?php if ( have_posts() ): ?>
+				<?php query_posts('post_type=added_text&name=page-not-found'); ?>
 					<?php while ( have_posts() ) : the_post(); ?>
-						<?php get_template_part('content-blog', get_post_format()); ?>
-					<?php endwhile; ?>
-				<?php endif; ?>
+						<div class="frame-width">
+							<h4><?php the_title(); ?></h4>
+							<p><?php the_content(); ?></p>
+						</div>			
+					<?php endwhile; ?> 
+				<?php wp_reset_query(); ?>
+				<div class="footer-padding"><!--additional padding for certain pages--></div>
 			</div>
 		</div>
 	</section>
