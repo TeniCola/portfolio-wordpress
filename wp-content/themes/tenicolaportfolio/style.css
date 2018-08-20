@@ -197,7 +197,7 @@ nav a {
     text-transform: uppercase;
     text-decoration: none;
     font-size: 18px;
-    line-height: 0px; /* To delete of comment out later*/
+    line-height: 0px;
 }
 
 ul#menu-header-menu li:hover {
@@ -219,7 +219,6 @@ div.frame-width.attachment-page {
 }
 
 div.frame-width.attachment-page img.attachment-full.size-full {
-    /* margin: 0 5px; */
     width: auto;
     height: auto;
     max-width: 999px;
@@ -267,17 +266,10 @@ img#about {
     overflow: auto;
 }
 
-.thumbnail img:hover { /**may revisit to try removing a href links for missing images, if possible*/
+.thumbnail img:hover {
     opacity: 0.65;
     box-shadow: 0px 0px 5px #64688c;
 }
-
-/* a.thumbnail {
-    width: 190px;
-    height: 140px;
-    margin: 6px;
-    float: left;
-} */
 
 a.thumbnail img { 
     width: 190px;
