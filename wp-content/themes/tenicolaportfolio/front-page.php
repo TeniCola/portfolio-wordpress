@@ -17,16 +17,10 @@ get_header(); ?>
 <section id="home">
     <div class="frame-width banner">
         <?php query_posts('posts_per_page=1&post_type=page_banners'); ?>
-			<?php while ( have_posts() ) : the_post();
-				$size = "full";
-                $banner_image = get_field('banner_image');  ?>
-        
+			<?php while ( have_posts() ) : the_post(); ?>
                 <div class="banner-image">
-                    <?php if($banner_image) { 
-                        echo wp_get_attachment_image( $banner_image, $size );
-                    } ?>					
+                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/08/home-banner-short-gradient.png" alt="Home page banner"/>				
                 </div>
-
 			<?php endwhile; ?> 
 		<?php wp_reset_query(); ?>
     </div>

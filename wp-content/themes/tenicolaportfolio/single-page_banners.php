@@ -29,3 +29,20 @@ get_header(); ?>
 </div><!-- .main-content -->
 
 <?php get_footer(); ?>
+
+<!-- OLD FUNCTION FOR CREATING PAGE BANNERS
+
+// PAGE BANNERS //
+	register_post_type( 'page_banners',
+        array(
+            'labels' => array(
+                'name' => __( 'Page Banners' ),
+                'singular_name' => __( 'Page Banner' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array( 'slug' => 'page-banners' ),
+        )
+	);
+
+-->

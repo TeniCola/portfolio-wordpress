@@ -15,7 +15,7 @@ get_header(); ?>
 			<h3><?php the_title(); ?></h3>
 			<div class="about-content">
 			<?php while ( have_posts() ) : the_post(); ?>
-				<img src="http://localhost/tenicola-portfolio/wp-content/uploads/2018/08/3208-300x300.png" alt="Profile image" id="about"/>
+				<img src="<?php echo home_url(); ?>/wp-content/uploads/2018/08/3208-300x300.png" alt="Profile image" id="about"/>
 				<?php the_content(); ?>
 			</div>
 				<div>

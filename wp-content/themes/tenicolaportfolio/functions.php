@@ -87,7 +87,7 @@ function custom_excerpt_more($more) {
 add_filter('excerpt_more', 'custom_excerpt_more');
 
 
-// Register custom post types for page banners and custom galleries
+// Register custom post types for custom galleries and additional test fields
 function create_custom_post_types() {
 
 	// ILLUSTRATIONS //
@@ -142,19 +142,6 @@ function create_custom_post_types() {
 		)
 	);
 
-	// PAGE BANNERS //
-	register_post_type( 'page_banners',
-        array(
-            'labels' => array(
-                'name' => __( 'Page Banners' ),
-                'singular_name' => __( 'Page Banner' )
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array( 'slug' => 'page-banners' ),
-        )
-	);
-
 	// ADDITIONAL TEXT FOR OTHER PAGE TEMPLATES //
 	register_post_type( 'added_text',
         array(
@@ -167,24 +154,9 @@ function create_custom_post_types() {
             'rewrite' => array( 'slug' => 'added-text' ),
         )
 	);
-	
-	// Comments out the code for posisble custom post type solution, otherwise no longer necessary //
-	/**
-	 * register_post_type( 'custom_galleries',
-     *     array(
-     *         'labels' => array(
-     *             'name' => __( 'Custom Galleries' ),
-     *             'singular_name' => __( 'Custom Gallery' )
-     *         ),
-     *        'public' => true,
-     *        'has_archive' => true,
-     *        'rewrite' => array( 'slug' => 'custom-galleries' ),
-     *    )
-	 * );
-	 */
-
 }
 add_action( 'init', 'create_custom_post_types' );
+
 
 // Get metadata from media files, including captions, etc.
 function wp_get_attachment( $attachment_id ) {
