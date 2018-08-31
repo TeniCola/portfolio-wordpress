@@ -26,7 +26,7 @@
                     <a href="<?php echo site_url(); ?>"><h1>Teniola Coker</h1></a>
                 </div>
                 <div class="half-width">
-                    <h2>Illustrator, Designer, &amp; Visual Storytelller</h2>
+                    <h2>Designer, Developer, &amp; Visual Storytelller</h2> <!--"Illustrator, Designer, &amp; Visual Storytelller"-->
                 </div>
             </div>
         </header>

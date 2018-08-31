@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the "About" page
+ * The template for displaying the "Services" page
  * 
  * @package WordPress
  * @subpackage TeniCola Portfolio
@@ -10,21 +10,34 @@
 get_header(); ?>
 
 	<div id="primary">
-		<div class="frame-width main-content about-page" role="main">
-			<!-- ABOUT THE ARTIST -->
+		<div class="frame-width main-content services-page" role="main">
+			<!-- SERVICES OFFERED -->
 			<h3><?php the_title(); ?></h3>
-			<div class="about-content">
+			<div class="service-content">
 			<?php while ( have_posts() ) : the_post(); ?>
-				<img src="<?php echo home_url(); ?>/wp-content/uploads/2018/08/profile-photo-cropped.png" alt="Profile image" id="about"/>
-				<!--originally "/wp-content/uploads/2018/08/3208-300x300.png"-->
 				<?php the_content(); ?>
 			</div>
-				<div>
+                    <!-- SERVICES -->
+                    <?php query_posts('post_type=services&order=ASC'); ?>
+                    <?php while ( have_posts() ) : the_post(); 
+                    $size = 'full';
+                    $image = get_field('image'); 
+                    $meta = wp_get_attachment( $image ); ?>
+                        <div class="third-width">
+                            <h4><?php the_title(); ?></h4>
+                            <div class="service-image">
+                                <?php if($image) { 
+                                    echo wp_get_attachment_image( $image, $size );
+                                } ?>
+                            </div>
+                            <p><?php the_content(); ?></p>
+                        </div>
+		            <?php endwhile; ?> 
+                    <?php wp_reset_query(); ?>
 					<!-- SKILLS & EXPERIENCE -->
 					<?php query_posts('post_type=added_text&name=skills-experience'); ?>
 					<?php while ( have_posts() ) : the_post(); ?>
-						<div>
-							<hr/>
+						<div class="skills-content">
 							<h4><?php the_title(); ?></h4>
 							<p><?php the_content(); ?></p>
 						</div>			

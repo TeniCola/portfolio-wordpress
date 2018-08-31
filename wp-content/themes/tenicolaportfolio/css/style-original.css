@@ -30,12 +30,11 @@ body {
 h3 {
     color: #64688c;
     font-family: 'Nova Slim', cursive;
-    font-size: 36px;
+    font-size: 40px;
     font-weight: normal;
     letter-spacing: 5px;
-    line-height: unset;
-    margin: 15px 0 20px 0;
-    /* height: auto; */
+    line-height: 0px;
+    padding: auto;
     text-align: center;
     text-transform: uppercase;
 }
@@ -47,8 +46,9 @@ h4 {
     font-variant: small-caps;
     font-weight: normal;
     letter-spacing: 3px;
-    line-height: unset;
-    margin: 20px 0 20px 5px;
+    line-height: 0px;
+    padding: auto;
+    margin-left: 5px;
 }
 
 .frame-width .center {
@@ -60,15 +60,15 @@ div.frame-width.main-content p {
     margin-bottom: 0px;
 }
 
-div.frame-width.main-content div.gallery p, div.frame-width.main-content.about-page p, div.frame-width.main-content.services-page p {
+div.frame-width.main-content div.gallery p, div.frame-width.main-content.about-page p {
     text-align: left;
 }
 
 .frame-width p {
     color: #0f0f0f;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: normal;
-    line-height: 23px;
+    line-height: 24px;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -86,32 +86,37 @@ hr {
 /***** GRID *****/
 
 .full-width {
-    width: 1040px;
+    width: 1200px;
     margin: 0px auto;
 }
 
 .half-width {
-    width: 520px;
+    width: 600px;
     float: left;
 }
 
-/* .two-third-width {
+.third-width, {
+    width: 400px;
+    float: left;
+}
+
+.two-third-width {
     width: 800px;
     float: left;
-} */
+}
 
 .frame {
-    background: rgba(255, 255, 255, 0.5); /*prev 0.4, may consider 0.6*/
+    background: rgba(255, 255, 255, 0.4);
     box-shadow: 0px 0px 5px #8789c5;
     margin: 20px auto 20px auto;
-    width: 1040px;
+    width: 1200px;
     height: auto;
     overflow: auto;
     clear: both;
 }
 
 .frame-width {
-    margin: 15px 35px 25px 35px;
+    margin: 15px 94px 25px 94px;
     clear: both;
 }
 
@@ -129,7 +134,7 @@ hr {
 /***** HEADER + NAV *****/
 
 header {
-    width: 1040px;
+    width: 1200px;
     margin: 0px auto;
 }
 
@@ -167,7 +172,7 @@ header h2 {
 
 nav {
     letter-spacing: 1px;
-    /* margin-left: 60px; */
+    margin-left: 60px;
     overflow: auto;
     font-weight: normal;
     padding-bottom: 16px;
@@ -179,10 +184,10 @@ nav li {
 
 ul#menu-header-menu li {
     list-style: none;
-    width: 150px;
+    width: 190px;
     float: left;
     text-align: center;
-    margin-top: 35px; /*prev 35px*/
+    margin-top: 35px;
     margin-right: 12px;
     padding: 10px 0px;
 }
@@ -191,7 +196,7 @@ nav a {
     color: #d7d6fe;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 0px;
 }
 
@@ -230,8 +235,8 @@ div.frame-width p.attachment-caption {
 /***** PAGE BANNERS *****/
 
 .banner img {
-    padding: 0 5px;
-    max-width: 99%; /*100% orig*/
+    margin-left: 5px;
+    max-width: 100%;
 }
 
 /***** ***** ***** ***** *****/
@@ -245,39 +250,11 @@ div.about-content {
 }
 
 img#about {
-    max-width: 310px;
-    margin: 17px 20px 0 5px;
-    border: #aaaafd 1px solid;
-    float: left;
-}
-
-/***** ***** ***** ***** *****/
-
-
-/***** SERVICES *****/
-
-div.third-width {
-    text-align: center;
-    width: 300px; /*347.3 is the actual thrid, may revisit*/
-    height: 450px;
-    margin: 30px 6px;
-    padding: 0 5px;
-    float: left;
-    display: block;
-    /* border: #d6d5fe 1px solid; originally #aaaafd but nixed in favor of bg color effect*/
-    background: #d6d5fe;
-}
-
-div.frame-width.main-content.services-page div.third-width p {
-    text-align: center;
-}
-
-div.skills-content {
-    clear: both;
-}
-
-div.service-image {
     max-width: 300px;
+    margin-right: 30px;
+    margin-left: 5px;
+    padding-top: 15px;
+    float: left;
 }
 
 /***** ***** ***** ***** *****/
@@ -295,9 +272,9 @@ div.service-image {
 }
 
 a.thumbnail img { 
-    width: 150px; /*190 prev*/
-    height: 120px; /*140 prev*/
-    margin: 5.5px; /*6px prev*/
+    width: 190px;
+    height: 140px;
+    margin: 6px; /**/
     float: left; /**/
     object-fit: cover;
     object-position: center;
@@ -351,17 +328,17 @@ a.thumbnail img {
 /***** FOOTER *****/
 
 footer {
-    width: 1040px;
+    width: 1200px;
     margin: 20px auto 0px auto;
     overflow: auto;
 }
 
 footer div div {
     color: #64688c;
-    font-size: 12px;
+    font-size: 12.5px;
     font-style: italic;
-    letter-spacing: 0.2px;
-    line-height: 16px;
+    letter-spacing: 0.5px;
+    line-height: 18px;
     float: left;
     width: 490px;
 }
@@ -383,16 +360,16 @@ ul#menu-social-media-menu li {
     list-style: none;
     color: #d7d6fe;
     font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-style: normal;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0px;
     line-height: 12px;
     background: #64688c;
-    width: 79px;
+    width: 89px;
     float: left;
-    margin-left: 11px;
+    margin-left: 12px;
     padding: 10px 0px;
 }
 

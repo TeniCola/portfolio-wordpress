@@ -16,7 +16,7 @@
                 <div>
                     <div>
                         <p>All Personal Characters, Designs, and Artwork &copy; Teniola Coker<br/>
-                        Portfolio Handmade by Teniola Coker || Last Updated -- August 2018</p>
+                        Portfolio Handmade by Teniola Coker || Last Updated -- September 2018</p>
                     </div>
                     <section>
                         <?php wp_nav_menu( array( 'theme_location' => 'social-media', 'menu_class' => 'social-media-menu' ) ); ?>

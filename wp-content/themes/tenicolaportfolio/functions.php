@@ -90,6 +90,19 @@ add_filter('excerpt_more', 'custom_excerpt_more');
 // Register custom post types for custom galleries and additional test fields
 function create_custom_post_types() {
 
+	// SERVICES TEMPLATES //
+	register_post_type( 'services',
+        array(
+            'labels' => array(
+                'name' => __( 'Services Offered' ),
+                'singular_name' => __( 'Service' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array( 'slug' => 'services-offered' ),
+        )
+	);
+	
 	// ILLUSTRATIONS //
 	register_post_type( 'illustrations',
 		array(

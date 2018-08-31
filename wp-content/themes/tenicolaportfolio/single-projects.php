@@ -12,8 +12,8 @@
 get_header(); ?>
 
 <div class="frame-width" role="main">
-    <h4><?php the_title(); ?></h4>
-    <?php while ( have_posts() ) : the_post();
+    <h4><?php the_title(); ?></h4> 
+	<?php while ( have_posts() ) : the_post();
         $size = 'medium';
         $full = 'full';       
         // IMAGES
@@ -26,7 +26,9 @@ get_header(); ?>
         $image_07 = get_field('image_07');
         $image_08 = get_field('image_08');
         $image_09 = get_field('image_09');
-        $image_10 = get_field('image_10'); 
+        $image_10 = get_field('image_10');
+        $image_11 = get_field('image_11');
+        $image_12 = get_field('image_12');  
         // META DATA (CAPTIONS, ETC)
         $meta_01 = wp_get_attachment( $image_01 );
         $meta_02 = wp_get_attachment( $image_02 );
@@ -37,9 +39,11 @@ get_header(); ?>
         $meta_07 = wp_get_attachment( $image_07 );
         $meta_08 = wp_get_attachment( $image_08 );
         $meta_09 = wp_get_attachment( $image_09 );
-        $meta_10 = wp_get_attachment( $image_10 ); ?>
+        $meta_10 = wp_get_attachment( $image_10 );
+        $meta_11 = wp_get_attachment( $image_11 );
+        $meta_12 = wp_get_attachment( $image_12 ); ?>
 
-        <p><?php the_content(); ?></p> 
+        <p><?php the_content(); ?></p>
         <div class="gallery">
             <!-- IMAGE 01 -->
             <a href="#<?php echo $image_01 ?>" class="thumbnail">
@@ -130,6 +134,24 @@ get_header(); ?>
             <a href="#_" class="lightbox" id="<?php echo $image_10 ?>">
                 <?php if($image_10) { 
                     echo wp_get_attachment_image( $image_10, $full);  
+                } ?><h6><?php echo $meta_10['caption']?></h6></a>
+            <!-- IMAGE 11 -->
+            <a href="#<?php echo $image_11 ?>" class="thumbnail">
+                <?php if($image_11) { 
+                    echo wp_get_attachment_image( $image_11, $size );
+                } ?></a>
+            <a href="#_" class="lightbox" id="<?php echo $image_11 ?>">
+                <?php if($image_11) { 
+                    echo wp_get_attachment_image( $image_11, $full);  
+                } ?><h6><?php echo $meta_11['caption']?></h6></a>
+            <!-- IMAGE 12 -->
+            <a href="#<?php echo $image_12 ?>" class="thumbnail">
+                <?php if($image_12) { 
+                    echo wp_get_attachment_image( $image_12, $size );
+                } ?></a>
+            <a href="#_" class="lightbox" id="<?php echo $image_12 ?>">
+                <?php if($image_12) { 
+                    echo wp_get_attachment_image( $image_12, $full);  
                 } ?><h6><?php echo $meta_10['caption']?></h6></a>
         </div>			
     <?php endwhile; // end of the loop. ?>
