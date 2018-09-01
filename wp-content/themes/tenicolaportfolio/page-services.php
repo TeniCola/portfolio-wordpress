@@ -24,7 +24,7 @@ get_header(); ?>
                     $image = get_field('image'); 
                     $meta = wp_get_attachment( $image ); ?>
                         <div class="third-width">
-                            <h4><?php the_title(); ?></h4>
+                            <!-- <h4><?php // the_title(); ?></h4> *to  remove comment code after custom icons completed* -->
                             <div class="service-image">
                                 <?php if($image) { 
                                     echo wp_get_attachment_image( $image, $size );
@@ -38,16 +38,6 @@ get_header(); ?>
 					<?php query_posts('post_type=added_text&name=skills-experience'); ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 						<div class="skills-content">
-							<h4><?php the_title(); ?></h4>
-							<p><?php the_content(); ?></p>
-						</div>			
-					<?php endwhile; ?> 
-					<?php wp_reset_query(); ?>
-					<!-- CONTACT -->
-					<?php query_posts('post_type=added_text&name=contact'); ?>
-					<?php while ( have_posts() ) : the_post(); ?>
-						<div>
-							<hr/>
 							<h4><?php the_title(); ?></h4>
 							<p><?php the_content(); ?></p>
 						</div>			

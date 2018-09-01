@@ -60,7 +60,7 @@ div.frame-width.main-content p {
     margin-bottom: 0px;
 }
 
-div.frame-width.main-content div.gallery p, div.frame-width.main-content.about-page p, div.frame-width.main-content.services-page p {
+div.frame-width.main-content div.gallery p, div.frame-width.main-content.about-page p, div.frame-width.main-content.services-page p, div.frame-width.main-content.contact-page p {
     text-align: left;
 }
 
@@ -68,7 +68,7 @@ div.frame-width.main-content div.gallery p, div.frame-width.main-content.about-p
     color: #0f0f0f;
     font-size: 15px;
     font-weight: normal;
-    line-height: 23px;
+    line-height: 24px;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -246,7 +246,7 @@ div.about-content {
 
 img#about {
     max-width: 310px;
-    margin: 17px 20px 0 5px;
+    margin: 22px 20px 0 5px;
     border: #aaaafd 1px solid;
     float: left;
 }
@@ -258,14 +258,18 @@ img#about {
 
 div.third-width {
     text-align: center;
-    width: 300px; /*347.3 is the actual thrid, may revisit*/
-    height: 450px;
+    width: 300px;
+    height: 440px; /*Originally 485px for 6 lines + 200px icon, will adjust one custum icons are created*/
     margin: 30px 6px;
     padding: 0 5px;
     float: left;
     display: block;
     /* border: #d6d5fe 1px solid; originally #aaaafd but nixed in favor of bg color effect*/
     background: #d6d5fe;
+}
+
+div.frame-width.main-content.services-page div.third-width h4 {
+    text-transform: uppercase;
 }
 
 div.frame-width.main-content.services-page div.third-width p {
@@ -277,7 +281,14 @@ div.skills-content {
 }
 
 div.service-image {
-    max-width: 300px;
+    max-width: 300px; /*placeholder; originally 200-300px, will adjust once custom icons are created*/
+    padding-top: 20px; /* !!! to remove once cusotm icons are completed */
+}
+
+div.service-image img.attachment-full.size-full {
+    width: unset;
+    height: unset;
+    max-width: 240px;
 }
 
 /***** ***** ***** ***** *****/

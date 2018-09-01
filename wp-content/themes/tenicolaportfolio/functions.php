@@ -102,8 +102,61 @@ function create_custom_post_types() {
             'rewrite' => array( 'slug' => 'services-offered' ),
         )
 	);
+
+	// PROJECTS //
+	register_post_type( 'projects',
+		array(
+			'labels' => array(
+				'name' => __( 'Projects Galleries' ),
+				'singular_name' => __( 'Projects Gallery' )
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array( 'slug' => 'projects-galleries' ),
+		)
+	);
+
+	// DESIGNS //
+	register_post_type( 'designs',
+		array(
+			'labels' => array(
+				'name' => __( 'Designs Galleries' ),
+				'singular_name' => __( 'Designs Gallery' )
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array( 'slug' => 'designs-galleries' ),
+		)
+	);
+
+	// ARTWORK GALLERIES //
+	register_post_type( 'artwork',
+        array(
+            'labels' => array(
+                'name' => __( 'Artwork Galleries' ),
+                'singular_name' => __( 'Artwork Gallery' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array( 'slug' => 'artwork-galleries' ),
+        )
+	);
 	
+	// ADDITIONAL TEXT FOR OTHER PAGE TEMPLATES //
+	register_post_type( 'added_text',
+        array(
+            'labels' => array(
+                'name' => __( 'Additional Text' ),
+                'singular_name' => __( 'Additional Text' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array( 'slug' => 'added-text' ),
+        )
+	);
+
 	// ILLUSTRATIONS //
+	/*
 	register_post_type( 'illustrations',
 		array(
 			'labels' => array(
@@ -127,46 +180,8 @@ function create_custom_post_types() {
 			'has_archive' => true,
 			'rewrite' => array( 'slug' => 'comics-galleries' ),
 		)
-	);
+	); */
 
-	// DESIGNS //
-	register_post_type( 'designs',
-		array(
-			'labels' => array(
-				'name' => __( 'Designs Galleries' ),
-				'singular_name' => __( 'Designs Gallery' )
-			),
-			'public' => true,
-			'has_archive' => true,
-			'rewrite' => array( 'slug' => 'designs-galleries' ),
-		)
-	);
-
-	// PROJECTS //
-	register_post_type( 'projects',
-		array(
-			'labels' => array(
-				'name' => __( 'Projects Galleries' ),
-				'singular_name' => __( 'Projects Gallery' )
-			),
-			'public' => true,
-			'has_archive' => true,
-			'rewrite' => array( 'slug' => 'projects-galleries' ),
-		)
-	);
-
-	// ADDITIONAL TEXT FOR OTHER PAGE TEMPLATES //
-	register_post_type( 'added_text',
-        array(
-            'labels' => array(
-                'name' => __( 'Additional Text' ),
-                'singular_name' => __( 'Additional Text' )
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array( 'slug' => 'added-text' ),
-        )
-	);
 }
 add_action( 'init', 'create_custom_post_types' );
 

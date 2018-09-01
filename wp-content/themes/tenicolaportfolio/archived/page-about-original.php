@@ -20,7 +20,6 @@ get_header(); ?>
 				<?php the_content(); ?>
 			</div>
 				<div>
-					<?php /**
 					<!-- SKILLS & EXPERIENCE -->
 					<?php query_posts('post_type=added_text&name=skills-experience'); ?>
 					<?php while ( have_posts() ) : the_post(); ?>
@@ -40,10 +39,10 @@ get_header(); ?>
 							<p><?php the_content(); ?></p>
 						</div>			
 					<?php endwhile; ?> 
-					<?php wp_reset_query(); ?> */ ?>
+					<?php wp_reset_query(); ?>
 				</div>
 			<?php endwhile; // end of the loop. ?>
-		<!-- <div class="footer-padding"><additional padding for certain pages></div> -->
+		<div class="footer-padding"><!--additional padding for certain pages--></div>
 	</div><!-- .main-content -->
 </div><!-- #primary -->
 
