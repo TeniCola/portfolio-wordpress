@@ -359,6 +359,30 @@ a.thumbnail img {
 /***** ***** ***** ***** *****/
 
 
+/***** PROJECT PAGE *****/
+
+div.gallery h4 {
+    margin-bottom: 10px;
+}
+
+div.gallery div.project-content {
+    max-width: 310px;
+    margin-left: 5px;
+    margin-right: 10px;
+    float: left;
+
+}
+
+div.gallery div.project-gallery {
+    max-width: 645px;
+    padding-top: 15px;
+    float: right;
+    
+}
+
+/***** ***** ***** ***** *****/
+
+
 /***** FOOTER *****/
 
 footer {

@@ -160,7 +160,7 @@ get_header(); ?>
                         <a href="#_" class="lightbox" id="<?php echo $image_12 ?>">
                             <?php if($image_12) { 
                                 echo wp_get_attachment_image( $image_12, $full);  
-                            } ?><h6><?php echo $meta_10['caption']?></h6></a>
+                            } ?><h6><?php echo $meta_12['caption']?></h6></a>
                     </div>			
 			    <?php endwhile; ?> 
 			    <?php wp_reset_query(); ?>
