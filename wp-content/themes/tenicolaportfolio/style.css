@@ -239,6 +239,10 @@ div.frame-width p.attachment-caption {
 
 /***** ABOUT *****/
 
+div.frame-width.main-content.about-page h3 {
+    margin-bottom: 5px;
+}
+
 div.about-content {
     padding-bottom: 15px;
     overflow: auto;
@@ -254,14 +258,14 @@ img#about {
 /***** ***** ***** ***** *****/
 
 
-/***** SERVICES *****/
+/***** SERVICES PAGE *****/
 
 div.third-width {
     text-align: center;
-    width: 300px;
-    height: 440px; /*Originally 485px for 6 lines + 200px icon, will adjust one custum icons are created*/
+    width: 290px;
+    height: 465px; /*Originally 485px for 6 lines + 200px icon, will adjust one custum icons are created*/
     margin: 30px 6px;
-    padding: 0 5px;
+    padding: 0 10px;
     float: left;
     display: block;
     /* border: #d6d5fe 1px solid; originally #aaaafd but nixed in favor of bg color effect*/
