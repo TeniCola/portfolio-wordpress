@@ -360,7 +360,7 @@ a.thumbnail img {
 
 .lightbox:target {
 	outline: none;
-    display: flex; /*prev block, without following code*/
+    display: flex; /*prev block, without the following code*/
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
